@@ -7,6 +7,7 @@ and gaze pattern analysis.
 
 import logging
 import sys
+import os
 from pathlib import Path
 import time
 import numpy as np
@@ -16,8 +17,8 @@ import streamlit as st
 from PIL import Image
 import plotly.graph_objects as go
 
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Add project root to path for imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from config import (
     ETHICAL_DISCLAIMER, CLASS_NAMES, CAMERA_RESOLUTION,
